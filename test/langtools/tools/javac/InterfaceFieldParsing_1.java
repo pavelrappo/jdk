@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1999, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1999, 2020, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -24,7 +24,7 @@
 /*
  * @test
  * @bug 4283170
- * @summary Verify that multiple variables in one inteface field declaration all have initializers.
+ * @summary Verify that multiple variables in one interface field declaration all have initializers.
  * @author maddox
  *
  * @run compile/fail InterfaceFieldParsing_1.java

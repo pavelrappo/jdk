@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001, 2003, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2001, 2020, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -57,7 +57,7 @@ java.lang.NullPointerException
   }
 
   /**
-   * This method tests @inheritDoc with an inteface.  Here is the inherited comment:<br>
+   * This method tests @inheritDoc with an interface.  Here is the inherited comment:<br>
    * {@inheritDoc}
    * @param p1 {@inheritDoc}
    * @param p2 {@inheritDoc}
