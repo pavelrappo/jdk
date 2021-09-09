@@ -106,6 +106,16 @@ function indexFilesLoaded() {
         && tagSearchIndex;
 }
 
+function copy(link) {
+    var textarea = document.createElement("textarea");
+    textarea.style.height = 0;
+    document.body.appendChild(textarea);
+    textarea.value = link.nextElementSibling.innerText;
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+}
+
 // Workaround for scroll position not being included in browser history (8249133)
 document.addEventListener("DOMContentLoaded", function(e) {
     var contentDiv = document.querySelector("div.flex-content");

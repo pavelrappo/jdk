@@ -80,6 +80,16 @@ public enum HtmlStyle {
      */
     snippet,
 
+    /**
+     * The class of the element containing a snippet element.
+     */
+    snippetContainer,
+
+    /**
+     * The class of the link to copy snippet content to the clipboard.
+     */
+    snippetCopy,
+
     //<editor-fold desc="navigation bar">
     //
     // The following constants are used for the main navigation bar that appears in the
