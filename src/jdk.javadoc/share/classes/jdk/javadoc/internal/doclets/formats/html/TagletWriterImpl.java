@@ -26,7 +26,6 @@
 package jdk.javadoc.internal.doclets.formats.html;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.List;
@@ -74,7 +73,6 @@ import jdk.javadoc.internal.doclets.toolkit.util.CommentHelper;
 import jdk.javadoc.internal.doclets.toolkit.util.DocLink;
 import jdk.javadoc.internal.doclets.toolkit.util.DocPath;
 import jdk.javadoc.internal.doclets.toolkit.util.DocPaths;
-import jdk.javadoc.internal.doclets.toolkit.util.DocletConstants;
 import jdk.javadoc.internal.doclets.toolkit.util.IndexItem;
 import jdk.javadoc.internal.doclets.toolkit.util.Utils;
 
@@ -395,11 +393,10 @@ public class TagletWriterImpl extends TagletWriter {
         HtmlTree pre = new HtmlTree(TagName.PRE)
                 .setStyle(HtmlStyle.snippet);
         pre.add(Text.of(utils.normalizeNewlines("\n")));
-        Content builder = new ContentBuilder();
         content.consumeBy((styles, sequence) -> {
             CharSequence text = utils.normalizeNewlines(sequence);
             if (styles.isEmpty()) {
-                builder.add(text);
+                pre.add(text);
             } else {
                 Element e = null;
                 String t = null;
@@ -444,13 +441,9 @@ public class TagletWriterImpl extends TagletWriter {
                     c = HtmlTree.SPAN(Text.of(sequence));
                     classes.forEach(((HtmlTree) c)::addStyle);
                 }
-                builder.add(c);
+                pre.add(c);
             }
         });
-        Arrays.stream(builder.toString().split(DocletConstants.NL)).forEach(
-                s -> pre.add(HtmlTree.CODE(s.isEmpty()
-                        ? HtmlTree.EMPTY
-                        : new RawHtml(s))).add(DocletConstants.NL));
         return copy.add(pre);
     }
 

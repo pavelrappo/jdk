@@ -75,8 +75,6 @@ import java.util.stream.Stream;
  */
 public class TestSnippetTag extends JavadocTester {
 
-    private static final String NL = System.getProperty("line.separator");
-
     private final ToolBox tb = new ToolBox();
 
     private TestSnippetTag() { }
@@ -216,7 +214,7 @@ public class TestSnippetTag extends JavadocTester {
                         <div class="snippet-container"><a href="#" class="snippet-copy" onclick="cop\
                         y(this)" title="Copy to clipboard"><img src="../copy.svg" alt="Copy to clipboard"></a>
                         <pre class="snippet">
-                        <code>    Hello, Snippet!</code>
+                            Hello, Snippet!
                         </pre>
                         </div>
                         """.formatted(j));
@@ -861,7 +859,7 @@ public class TestSnippetTag extends JavadocTester {
                     is)" title="Copy to clipboard"><img src="../copy.svg" alt="Copy to clipboard"></a>
                     <pre class="snippet">
                     %s</pre>
-                    </div>""".formatted(id, convertLines(t.expectedOutput())));
+                    </div>""".formatted(id, t.expectedOutput()));
         });
     }
 
@@ -957,7 +955,7 @@ public class TestSnippetTag extends JavadocTester {
                         y(this)" title="Copy to clipboard"><img src="../copy.svg" alt="Copy to clipboard"></a>
                         <pre class="snippet">
                         %s</pre>
-                        </div>""".formatted(index, convertLines(expectedOutput)));
+                        </div>""".formatted(index, expectedOutput));
         });
     }
 
@@ -1004,7 +1002,7 @@ public class TestSnippetTag extends JavadocTester {
                           <!-- yet another user entry point to the html file (not used by test): through an index page -->
                           {@index this A document}
                           {@snippet :
-                      %s}
+                              %s}
                         </body>
                       </html>
                       """.formatted(content);
@@ -1014,7 +1012,7 @@ public class TestSnippetTag extends JavadocTester {
                 "-sourcepath", srcDir.toString(),
                 "pkg");
         checkExit(Exit.OK);
-        checkOutput("pkg/doc-files/file.html", true, convertLines(content));
+        checkOutput("pkg/doc-files/file.html", true, content);
     }
 
     @Test
@@ -1056,7 +1054,7 @@ public class TestSnippetTag extends JavadocTester {
                 "-sourcepath", srcDir.toString(),
                 "pkg");
         checkExit(Exit.OK);
-        checkOutput("pkg/doc-files/file.html", true, convertLines(content));
+        checkOutput("pkg/doc-files/file.html", true, content);
     }
 
     @Test
@@ -1513,12 +1511,12 @@ public class TestSnippetTag extends JavadocTester {
             checkOutput("pkg/A.html", true,
                     """
                     <span class="element-name">case%s</span>()</div>
-                    <div class="block">                        
+                    <div class="block">
                     <div class="snippet-container"><a href="#" class="snippet-copy" onclick="copy(th\
                     is)" title="Copy to clipboard"><img src="../copy.svg" alt="Copy to clipboard"></a>
                     <pre class="snippet">
                     %s</pre>
-                    </div>""".formatted(index, convertLines(t.expectedOutput())));
+                    </div>""".formatted(index, t.expectedOutput()));
         });
     }
 
@@ -1634,7 +1632,6 @@ public class TestSnippetTag extends JavadocTester {
                     <div class="snippet-container"><a href="#" class="snippet-copy" onclick="copy(th\
                     is)" title="Copy to clipboard"><img src="../copy.svg" alt="Copy to clipboard"></a>
                     <pre class="snippet">
-                    <code></code>
                     </pre>
                     </div>""");
         checkOutput("pkg/A.html", true,
@@ -1644,7 +1641,6 @@ public class TestSnippetTag extends JavadocTester {
                     <div class="snippet-container"><a href="#" class="snippet-copy" onclick="copy(th\
                     is)" title="Copy to clipboard"><img src="../copy.svg" alt="Copy to clipboard"></a>
                     <pre class="snippet">
-                    <code></code>
                     </pre>
                     </div>""");
     }
@@ -1746,8 +1742,7 @@ public class TestSnippetTag extends JavadocTester {
                         <div class="snippet-container"><a href="#" class="snippet-copy" onclick="cop\
                         y(this)" title="Copy to clipboard"><img src="../copy.svg" alt="Copy to clipboard"></a>
                         <pre class="snippet">
-                        <code>2</code>
-                        </pre>
+                        2</pre>
                         </div>
                         """.formatted(j));
         }
@@ -1832,7 +1827,7 @@ public class TestSnippetTag extends JavadocTester {
                         y(this)" title="Copy to clipboard"><img src="../copy.svg" alt="Copy to clipboard"></a>
                         <pre class="snippet">
                         %s</pre>
-                        </div>""".formatted(index, convertLines(t.expectedOutput())));
+                        </div>""".formatted(index, t.expectedOutput()));
         });
     }
 
@@ -2164,13 +2159,7 @@ public class TestSnippetTag extends JavadocTester {
                         y(this)" title="Copy to clipboard"><img src="../copy.svg" alt="Copy to clipboard"></a>
                         <pre class="snippet">
                         %s</pre>
-                        </div>""".formatted(index, convertLines(t.expectedOutput())));
+                        </div>""".formatted(index, t.expectedOutput()));
         });
-    }
-
-    private static String convertLines(String output) {
-        StringBuilder sb = new StringBuilder();
-        Arrays.stream(output.split(NL)).forEach(t -> { sb.append("<code>").append(t).append("</code>").append(NL); });
-        return sb.toString();
     }
 }

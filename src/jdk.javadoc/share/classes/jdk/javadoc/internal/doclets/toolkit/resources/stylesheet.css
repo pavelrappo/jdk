@@ -874,52 +874,35 @@ pre.snippet {
     white-space: pre;
     counter-reset: line;
 }
-pre.snippet code:before {
-    font-family:'DejaVu Sans Mono', monospace;
-    counter-increment: line;
-    content: counter(line);
-    display: inline-block;
-    border-right: 1px solid #f5f5f5;
-    text-align: right;
-    padding-right: 0.4em;
-    margin-right: 0.5em;
-    min-width: 1.3em;
-    color: #b0b0b0;
-}
 div.snippet-container {
     position: relative;
 }
 a.snippet-copy {
     position: absolute;
-    top: 6px;
-    right: 6px;
+    top: 8px;
+    right: 8px;
 }
 a.snippet-copy img {
     width: 18px;
     height: 18px;
-    opacity: 50%;
+    opacity: 60%;
 }
 a.snippet-copy:hover img {
     opacity: 100%;
 }
 a.snippet-copy:active img {
     background: #d3d3d3;
-    opacity: 100%;
+    opacity: 90%;
 }
 @media screen and (max-width: 800px) {
     pre.snippet {
         padding-top: 24px;
     }
+    a.snippet-copy {
+        top: 6px;
+        right: 6px;
+    }
 }
-/* pre.snippet code {
-    width: 100%;
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-}
-pre.snippet code:nth-child(even) {
-    background-color: #f5f5f5;
-} */
 pre.snippet .italic {
     font-style: italic;
 }
