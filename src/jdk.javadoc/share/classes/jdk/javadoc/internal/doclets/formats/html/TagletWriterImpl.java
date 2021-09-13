@@ -382,14 +382,14 @@ public class TagletWriterImpl extends TagletWriter {
 
     @Override
     protected Content snippetTagOutput(Element element, SnippetTree tag, StyledText content) {
-        String copyText = resources.getText("doclet.Copy_to_clipboard");
+        String copyText = resources.getText("doclet.Copy_snippet_to_clipboard");
         HtmlTree copy = HtmlTree.DIV(HtmlStyle.snippetContainer,
                 HtmlTree.A("#", new HtmlTree(TagName.IMG)
                                 .put(HtmlAttr.SRC, htmlWriter.pathToRoot.resolve(DocPaths.CLIPBOARD_SVG).getPath())
                                 .put(HtmlAttr.ALT, copyText))
                         .addStyle(HtmlStyle.snippetCopy)
                         .put(HtmlAttr.ONCLICK, "copy(this)")
-                        .put(HtmlAttr.TITLE, copyText));
+                        .put(HtmlAttr.ARIA_LABEL, copyText));
         HtmlTree pre = new HtmlTree(TagName.PRE)
                 .setStyle(HtmlStyle.snippet);
         pre.add(Text.of(utils.normalizeNewlines("\n")));

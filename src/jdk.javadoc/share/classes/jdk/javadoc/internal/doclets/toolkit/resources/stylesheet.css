@@ -894,6 +894,29 @@ a.snippet-copy:active img {
     background: #d3d3d3;
     opacity: 90%;
 }
+a.snippet-copy::after {
+    background-color: #d0d8e0;
+    color: #000000;
+    border-radius: 2px;
+    border: 1px solid #c8d0e0;
+    content: attr(aria-label);
+    font-family:'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-size: 85%;
+    line-height: 1.2em;
+    padding: 0.2em 0.4em;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s;
+    visibility: hidden;
+    white-space: nowrap;
+    top: -1em;
+    right: calc(110% + 0.2em);
+}
+a.snippet-copy:hover::after, a.snippet-copy:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+
 @media screen and (max-width: 800px) {
     pre.snippet {
         padding-top: 24px;
@@ -912,8 +935,8 @@ pre.snippet .bold {
 }
 
 pre.snippet .highlighted {
-    background-color: #ffb80f;
+    background-color: #ffc333;
     border-radius: 2px;
     padding: 0.08em;
-    border: 1px solid #d0d0d0;
+    border: 1px solid #ffb80f;
 }
