@@ -30,7 +30,7 @@
  * elements, the declared entities that make up a program.  Elements
  * include classes, interfaces, methods, constructors, and fields.
  * The interfaces in this package do not model the structure of a
- * program inside a method body; for example there is no
+ * program inside a method body; for example, there is no
  * representation of a {@code for} loop or {@code try}-{@code finally}
  * block.  However, the interfaces can model some structures only
  * appearing inside method bodies, such as local variables and
@@ -78,7 +78,7 @@
  * javax.lang.model.util.Elements#isBridge(ExecutableElement)
  * bridge methods} used in implementing covariant returns, are
  * translation artifacts strictly outside of this model. However, when
- * operating on class files, it is helpful be able to operate on such
+ * operating on class files, it is helpful to be able to operate on such
  * elements, screening them out when appropriate.
  *
  * <p>During annotation processing, operating on incomplete or

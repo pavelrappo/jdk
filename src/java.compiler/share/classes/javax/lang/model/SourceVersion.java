@@ -202,7 +202,7 @@ public enum SourceVersion {
      * @see <a href="https://openjdk.org/jeps/213">
      * JEP 213: Milling Project Coin</a>
      */
-     RELEASE_9,
+    RELEASE_9,
 
     /**
      * The version introduced by the Java Platform, Standard Edition
@@ -470,7 +470,7 @@ public enum SourceVersion {
      *
      * @apiNote This method is included alongside {@link latest} to
      * allow identification of situations where the language model API
-     * is running on a platform version different than the latest
+     * is running on a platform version different from the latest
      * version modeled by the API. One way that sort of situation can
      * occur is if an IDE or similar tool is using the API to model
      * source version <i>N</i> while running on platform version

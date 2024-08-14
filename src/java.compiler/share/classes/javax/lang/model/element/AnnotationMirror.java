@@ -47,7 +47,7 @@ public interface AnnotationMirror {
 
     /**
      * Returns the values of this annotation's elements.
-     * This is returned in the form of a map that associates elements
+     * These are returned in the form of a map that associates elements
      * with their corresponding values.
      * Only those elements with values explicitly present in the
      * annotation are included, not those that are implicitly assuming
