@@ -60,7 +60,7 @@ public interface Elements {
      *         {@linkplain java.lang.module##root-modules root module},
      *     </li>
      *     <li>if the above yields an empty list, search
-     *         {@link #getAllModuleElements() all modules} for observable
+     *         {@linkplain #getAllModuleElements() all modules} for observable
      *         packages with the given name
      *     </li>
      * </ul>
@@ -147,7 +147,7 @@ public interface Elements {
      *         {@linkplain java.lang.module##root-modules root module},
      *     </li>
      *     <li>if the above yields an empty list, search
-     *         {@link #getAllModuleElements() all modules} for observable
+     *         {@linkplain #getAllModuleElements() all modules} for observable
      *         type elements with the given name
      *     </li>
      * </ul>
