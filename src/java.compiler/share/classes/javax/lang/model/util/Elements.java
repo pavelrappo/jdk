@@ -56,7 +56,7 @@ public interface Elements {
      * <ul>
      *     <li>find non-empty packages with the given name returned by
      *         {@link #getPackageElement(ModuleElement, CharSequence)},
-     *         where the provided ModuleSymbol is any
+     *         where the provided ModuleElement is any
      *         {@linkplain java.lang.module##root-modules root module},
      *     </li>
      *     <li>if the above yields an empty list, search
@@ -143,7 +143,7 @@ public interface Elements {
      * <ul>
      *     <li>find type elements with the given name returned by
      *         {@link #getTypeElement(ModuleElement, CharSequence)},
-     *         where the provided ModuleSymbol is any
+     *         where the provided ModuleElement is any
      *         {@linkplain java.lang.module##root-modules root module},
      *     </li>
      *     <li>if the above yields an empty list, search
