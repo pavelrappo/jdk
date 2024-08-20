@@ -617,7 +617,7 @@ public interface Elements {
 
     /**
      * Returns all members of a type element, whether inherited or
-     * declared directly.  For a class the result also includes its
+     * declared directly.  For a class, the result also includes its
      * constructors, but not local or anonymous classes.
      *
      * @apiNote Elements of certain kinds can be isolated using
@@ -878,7 +878,7 @@ public interface Elements {
      * accessor.
      *
      * @implSpec The default implementation of this method checks if the element
-     * enclosing the accessor has kind {@link ElementKind#RECORD RECORD} if that is
+     * enclosing the accessor has kind {@link ElementKind#RECORD RECORD}, if that is
      * the case, then all the record components on the accessor's enclosing element
      * are retrieved by invoking {@link ElementFilter#recordComponentsIn(Iterable)}.
      * If the accessor of at least one of the record components retrieved happen to
