@@ -879,9 +879,9 @@ public interface Elements {
      *
      * @implSpec The default implementation of this method checks if the element
      * enclosing the accessor has kind {@link ElementKind#RECORD RECORD}, if that is
-     * the case, then all the record components on the accessor's enclosing element
-     * are retrieved by invoking {@link ElementFilter#recordComponentsIn(Iterable)}.
-     * If the accessor of at least one of the record components retrieved happen to
+     * the case, then all the record components of the accessor's enclosing element
+     * are isolated by invoking {@link ElementFilter#recordComponentsIn(Iterable)}.
+     * If the accessor of at least one of the record components retrieved happens to
      * be equal to the accessor passed as a parameter to this method, then that
      * record component is returned, in any other case {@code null} is returned.
      *
