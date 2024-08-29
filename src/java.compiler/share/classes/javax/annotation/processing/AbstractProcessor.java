@@ -157,7 +157,7 @@ public abstract class AbstractProcessor implements Processor {
      *
      * @implSpec
      * Initializes the processor with the processing environment by
-     * setting the {@code processingEnv} field to the value of the
+     * setting the {@link #processingEnv} field to the value of the
      * {@code processingEnv} argument.  An {@code
      * IllegalStateException} will be thrown if this method is called
      * more than once on the same object.
