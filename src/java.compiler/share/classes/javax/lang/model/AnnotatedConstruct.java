@@ -52,7 +52,7 @@ import javax.lang.model.type.*;
  *
  * <p>In the definitions below, an annotation <i>A</i> has an
  * annotation interface <i>AI</i>. If <i>AI</i> is a repeatable annotation
- * interface, the type of the containing annotation is <i>AIC</i>.
+ * interface, the type of the container annotation is <i>AIC</i>.
  *
  * <p>Annotation <i>A</i> is <em>directly present</em> on a construct
  * <i>C</i> if either:
