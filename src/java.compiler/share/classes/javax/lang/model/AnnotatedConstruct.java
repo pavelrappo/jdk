@@ -189,10 +189,11 @@ public interface AnnotatedConstruct {
     <A extends Annotation> A getAnnotation(Class<A> annotationType);
 
     /**
-     * Returns annotations that are <em>associated</em> with this construct.
+     * Returns annotations of the specified type that are <em>associated</em>
+     * with this construct.
      *
-     * If there are no annotations associated with this construct, the
-     * return value is an array of length 0.
+     * If there are no annotations of the specified type associated with this
+     * construct, the return value is an array of length 0.
      *
      * The order of annotations which are directly or indirectly
      * present on a construct <i>C</i> is computed as if indirectly present
