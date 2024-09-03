@@ -45,8 +45,8 @@ import javax.lang.model.type.*;
  * <em>type annotation</em>.
  *
  * The terms <em>directly present</em>, <em>present</em>,
- * <em>indirectly present</em>, and <em>associated </em> are used
- * throughout this interface to describe precisely which annotations,
+ * <em>indirectly present</em>, and <em>associated </em> are introduced in
+ * this interface to describe precisely which annotations,
  * either declaration annotations or type annotations, are returned by
  * the methods in this interface.
  *
