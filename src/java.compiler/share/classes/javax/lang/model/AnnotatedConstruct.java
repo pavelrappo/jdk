@@ -78,7 +78,7 @@ import javax.lang.model.type.*;
  * Specification</cite> (JLS {@jls 8.10.1}).
  *
  * If there are multiple annotations of type <i>AI</i> present on
- * <i>C</i>, then if <i>AI</i> is repeatable annotation interface, an
+ * <i>C</i>, then if <i>AI</i> is a repeatable annotation interface, an
  * annotation of type <i>AIC</i> is {@linkplain javax.lang.model.util.Elements#getOrigin(AnnotatedConstruct, AnnotationMirror) implicitly declared} on <i>C</i>.
  * <li> A representation of <i>A</i> appears in the executable output
  * for <i>C</i>, such as the {@code RuntimeVisibleAnnotations} (JVMS {@jvms 4.7.16}) or
